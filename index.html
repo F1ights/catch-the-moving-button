@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catch Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+  <h1>🎯 Catch the Button</h1>
+
+  <div class="stats">
+    <p>Score: <span id="score">0</span></p>
+    <p>Level: <span id="level">1</span></p>
+    <p>Time: <span id="time">5</span>s</p>
+  </div>
+
+  <button id="startBtn">Start Game</button>
+  <button id="restartBtn" class="hidden">Restart</button>
+
+  <div id="gameArea">
+    <button id="target" class="hidden">Tap Me!</button>
+  </div>
+
+  <p id="message"></p>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
