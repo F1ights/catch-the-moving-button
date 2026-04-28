@@ -30,12 +30,14 @@ body {
 
 #target {
   position: absolute;
-  padding: 10px 15px;
-  border: none;
-  background: #ff4757;
-  color: white;
-  border-radius: 8px;
+  font-size: 40px;
   cursor: pointer;
+  user-select: none;
+  transition: transform 0.1s;
+}
+
+#target:active {
+  transform: scale(1.2);
 }
 
 button {
