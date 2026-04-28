@@ -33,7 +33,7 @@ body {
   font-size: 40px;
   cursor: pointer;
   user-select: none;
-  transition: transform 0.1s;
+  transition: top 0.4s linear, left 0.4s linear;
 }
 
 #target:active {
