@@ -35,11 +35,20 @@ function startLevel() {
 }
 
 function moveTarget() {
-  target.style.top = Math.random() * (gameArea.clientHeight - 60) + "px";
-  target.style.left = Math.random() * (gameArea.clientWidth - 60) + "px";
+  const maxX = gameArea.clientWidth - 60;
+  const maxY = gameArea.clientHeight - 60;
 
-  clearTimeout(target.moveTimeout);
-  target.moveTimeout = setTimeout(moveTarget, moveSpeed);
+  const newX = Math.random() * maxX;
+  const newY = Math.random() * maxY;
+
+  target.style.left = newX + "px";
+  target.style.top = newY + "px";
+
+  const angle = Math.random() * 360;
+  target.style.transform = `rotate(${angle}deg)`;
+
+  // keep moving continuously
+  setTimeout(moveTarget, moveSpeed);
 }
 
 function startTimer() {
@@ -63,14 +72,14 @@ function updateUI() {
 function winRound() {
   score++;
   level++;
-  moveSpeed *= 0.85; // faster each level
+  moveSpeed *= 0.9; // faster each level
   startLevel();
 }
 
 function loseGame() {
   clearInterval(timer);
   target.classList.add("hidden");
-  message.textContent = "💀 Game Over!";
+  message.textContent = "Mouse gets sneaky 🐁";
 }
 
 target.addEventListener("click", winRound);
