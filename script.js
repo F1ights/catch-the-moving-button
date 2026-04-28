@@ -44,10 +44,9 @@ function moveTarget() {
   target.style.left = newX + "px";
   target.style.top = newY + "px";
 
-  const angle = Math.random() * 360;
+  const angle = Math.random() * 60 - 30;
   target.style.transform = `rotate(${angle}deg)`;
 
-  // keep moving continuously
   setTimeout(moveTarget, moveSpeed);
 }
 
@@ -72,7 +71,7 @@ function updateUI() {
 function winRound() {
   score++;
   level++;
-  moveSpeed *= 0.75; // faster each level
+  moveSpeed *= 0.95
   startLevel();
 }
 
