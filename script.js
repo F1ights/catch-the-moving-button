@@ -35,8 +35,8 @@ function startLevel() {
 }
 
 function moveTarget() {
-  target.style.top = Math.random() * (gameArea.clientHeight - 50) + "px";
-  target.style.left = Math.random() * (gameArea.clientWidth - 80) + "px";
+  target.style.top = Math.random() * (gameArea.clientHeight - 60) + "px";
+  target.style.left = Math.random() * (gameArea.clientWidth - 60) + "px";
 
   clearTimeout(target.moveTimeout);
   target.moveTimeout = setTimeout(moveTarget, moveSpeed);
