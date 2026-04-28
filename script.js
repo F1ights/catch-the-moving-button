@@ -72,14 +72,14 @@ function updateUI() {
 function winRound() {
   score++;
   level++;
-  moveSpeed *= 0.9; // faster each level
+  moveSpeed *= 0.75; // faster each level
   startLevel();
 }
 
 function loseGame() {
   clearInterval(timer);
   target.classList.add("hidden");
-  message.textContent = "Mouse gets sneaky 🐁";
+  message.textContent = "Sneaky mouse 🐭";
 }
 
 target.addEventListener("click", winRound);
